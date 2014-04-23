@@ -1,5 +1,30 @@
 source 'https://rubygems.org'
 
+group :development, :test do
+  gem 'pry-rails'
+  gem 'rspec'
+  gem 'rspec-rails'
+  gem 'guard'
+  gem 'guard-rspec'
+  gem 'guard-bundler', require: false
+  gem 'terminal-notifier-guard'
+  gem 'shoulda-matchers'
+  gem 'capybara'
+  gem 'jasmine'
+  gem 'annotate'
+  gem 'rubocop'
+  gem 'factory_girl_rails'
+end
+
+# bundle install
+# rails g rspec:init
+# rails g rspec:install
+# bundle exec guard init
+# In the guard file: guard :rspec, cmd: 'bundle exec rspec’ do
+# bundle exec guard
+# create spec file e.g. spec/models/user_spec.rb
+# run migration: rake db:migrate RAILS_ENV=test
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.0'
