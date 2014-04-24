@@ -1,6 +1,8 @@
 class PuppiesController < ApplicationController
+  def index
+    @puppies = Puppy.all
+  end
 
-<<<<<<< HEAD
   def show
     @puppy = Puppy.find(params[:id])
 
@@ -17,8 +19,6 @@ class PuppiesController < ApplicationController
     end
   end
  
-  private
-=======
   def new
     @puppy = Puppy.new
   end
@@ -41,14 +41,9 @@ class PuppiesController < ApplicationController
 
   private
 
->>>>>>> 72e8b4e33888b5fb8e2d1a6a7e6e36d71b5073df
   def puppy_params
     params.require(:puppy).permit(:name, :img_url)
   end
 
-<<<<<<< HEAD
-end
-=======
 end
 
->>>>>>> 72e8b4e33888b5fb8e2d1a6a7e6e36d71b5073df
